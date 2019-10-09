@@ -1,0 +1,4 @@
+sources:
+  0.7.3:
+    url: https://github.com/ament/ament_cmake/archive/0.7.3.zip
+    sha256: f60d5c6ca29cf53029dd0467767cf32d9b05bdbf6f8f52ac6b254e483ea28470
