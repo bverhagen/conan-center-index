@@ -1,0 +1,4 @@
+sources:
+  0.8.0:
+    url: https://github.com/ros2/ament_cmake_ros/archive/0.8.0.zip
+    sha256: 7d439e5136782c2945e1d686989342195a3df2ebcdb13e176126f176ff7e6cd7
