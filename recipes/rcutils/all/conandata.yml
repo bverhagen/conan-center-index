@@ -1,0 +1,4 @@
+sources:
+  0.8.0:
+    url: https://github.com/ros2/rcutils/archive/0.8.0.zip
+    sha256: cd95b9664dcd99df9315d1326aec578499e2016c2d0e224e6db8eb3e84b2cddc
