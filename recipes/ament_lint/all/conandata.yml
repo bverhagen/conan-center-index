@@ -1,0 +1,4 @@
+sources:
+  0.8.0:
+    url: https://github.com/ament/ament_lint/archive/0.8.0.zip
+    sha256: 9abaf13f88941eac476a4dec95b42454ce7491a1d4f0fe546073ef6d5c77cfb6
