@@ -2,3 +2,12 @@ sources:
   0.7.3:
     url: https://github.com/ament/ament_cmake/archive/0.7.3.zip
     sha256: f60d5c6ca29cf53029dd0467767cf32d9b05bdbf6f8f52ac6b254e483ea28470
+  0.8.1:
+    url: https://github.com/ament/ament_cmake/archive/0.8.1.zip
+    sha256: 6b2d44bdba43313c672a78f47f191f767901fccb3f728b6622603d8030952039
+
+requires:
+  0.7.3:
+    - 'ament_package/0.7.2@'
+  0.8.1:
+    - 'ament_package/0.8.5@'

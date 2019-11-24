@@ -15,8 +15,6 @@ class AmentCmakeConan(ConanFile):
     settings = "os_build", "arch_build", "compiler", "build_type"
     _source_subfolder = "source_subfolder"
 
-    requires = ('ament_package/0.7.2@')
-
     def system_requirements(self):
         import pip
         if hasattr(pip, "main"):
@@ -25,7 +23,12 @@ class AmentCmakeConan(ConanFile):
             from pip._internal import main
             main(['install', '--user', "colcon-common-extensions"])
 
+    def requirements(self):
+        for requirement in self.conan_data["requires"][self.version]:
+            self.requires(requirement)
+
     def source(self):
+        print(self.conan_data["requires"][self.version])
         tools.get(**self.conan_data["sources"][self.version])
         extracted_dir = self.name + "-" + self.version
         os.rename(extracted_dir, self._source_subfolder)
