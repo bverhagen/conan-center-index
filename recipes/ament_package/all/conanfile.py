@@ -2,7 +2,6 @@ from conans import ConanFile, tools
 import os
 from sys import version
 
-
 class AmentPackageConan(ConanFile):
     name = "ament_package"
     description = "Python package for parsing package manifest files (package.xml). "
@@ -34,7 +33,7 @@ class AmentPackageConan(ConanFile):
     def package(self):
         self.copy(pattern="*", dst="lib", src="install/lib")
         self.copy(pattern="*", dst="share", src="install/share")
-        self.copy("LICENSE", dst="licenses")
+        self.copy("LICENSE", dst="licenses", src=self._source_subfolder)
 
     def package_info(self):
         self.env_info.PYTHONPATH.append(self.package_folder + '/lib/python' + version[:3] + '/site-packages')

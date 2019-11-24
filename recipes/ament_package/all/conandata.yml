@@ -2,3 +2,6 @@ sources:
   0.7.2:
     url: https://github.com/ament/ament_package/archive/0.7.2.zip
     sha256: 288be342c52195b067944c5c96f69dcd8f2b150a109388afbb12c297b724fb0e
+  0.8.5:
+    url: https://github.com/ament/ament_package/archive/0.8.5.zip
+    sha256: d3b5f45c5ef9fab25ad0c2cd47aa7e132db9edd9b709d57f44102c7a570d9669
