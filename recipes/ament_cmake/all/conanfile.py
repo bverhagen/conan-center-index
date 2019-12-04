@@ -38,8 +38,10 @@ class AmentCmakeConan(ConanFile):
 
     def package(self):
         self.copy(pattern="*", dst="share", src="install/share")
-        self.copy("LICENSE", dst="licenses")
+        self.copy("LICENSE", dst="licenses", src=self._source_subfolder)
 
     def package_info(self):
-        cmake_dirs = glob.glob("{PACKAGE_DIR}/share/*/cmake".format(PACKAGE_DIR = self.package_folder))
-        self.env_info.CMAKE_PREFIX_PATH = cmake_dirs
+        # cmake_dirs = glob.glob("{PACKAGE_DIR}/share/*/cmake".format(PACKAGE_DIR = self.package_folder))
+        cmake_dirs = glob.glob("share/*/cmake")
+        # self.env_info.CMAKE_PREFIX_PATH = cmake_dirs
+        self.cpp_info.builddirs = cmake_dirs

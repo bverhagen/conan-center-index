@@ -4,8 +4,12 @@ import os
 
 class TestPackageConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
+    generators = "cmake"
 
-    def test(self):
+    def build(self):
         cmake = CMake(self)
         cmake.configure()
         cmake.build()
+
+    def test(self):
+        pass
